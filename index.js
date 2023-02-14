@@ -46,3 +46,18 @@ for (i = 0; i < divAreasList.length; i++) {
     console.log(element);
 }
 
+/*
+Very old browsers (and Internet Explorer in particular)
+don't fully support the NodeList interface. As such, the 
+code above may not work as intended. If you need to support 
+Internet Explorer, you can use the Array.prototype.forEach() method, 
+like this: 
+*/
+
+// Get a list of descriptions
+const list = document.querySelectorAll(".description-display");
+
+// Log them to the console
+Array.prototype.forEach.call(list, function (element) {
+  console.log(element);
+});
